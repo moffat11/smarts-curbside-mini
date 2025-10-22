@@ -13,3 +13,16 @@
     -converts frame
     -makes per segment time-binned counts
 ->Lastly, I was able to make a GeoJSOn file (a simple map) as I am quite knowledged with an open source application that can open the file, QGIS, hence it will be quite interesting to see how good python can map a map :)
+
+"# Tesseract + OCR (Reading Signs)"
+Environment - curbside
+
+With the following modules/libraries: pytesseract, json, argparse and cv2, I was able to see how signs are interpreted, decoded in a way and saved.
+
+1)ocr_signs.py on the sign images to save intepretation as raw text
+and
+2)parse_rules.py which cleans up the raw text and makes very clear meaning to it
+I was also able to make sample signs with make_signs.py
+
++made sure to open the geojson file I made as well, it makes slight sense but there's more to look into from QGIS
+
