@@ -1,0 +1,11 @@
+{
+  "iou_thr": 0.5,
+  "tp": 81,
+  "fp": 117,
+  "fn": 4,
+  "precision": 0.4090909090909091,
+  "recall": 0.9529411764705882,
+  "mean_iou_on_tps": 0.775930592215513,
+  "pred_path": "det_track\\outputs\\detect50.csv",
+  "gt_path": "det_track\\outputs\\labels.csv"
+}
