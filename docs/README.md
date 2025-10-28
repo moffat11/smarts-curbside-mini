@@ -26,3 +26,38 @@ I was also able to make sample signs with make_signs.py
 
 +made sure to open the geojson file I made as well, it makes slight sense but there's more to look into from QGIS
 
+"# 1) Transformer Segmentation (SegFormer)"
+-> Semantic Segmentation: is a computer vision technique that assigns a class label to every single pixel in an image.
+
+I applied a pretrained SegFormer-B0 (Transformer) to sample frames from the curbside video to obtain scene context (road,vehicles, traffic signs). The script outputs side-by-side overlays for qualitative inspection. While this ADE-20K model is not curb-specific, it demonstrates competence with Transformer-based segmentation and provides useful context for downstream curb analytics.
+Result: 4 overlays saved to segmentation/outputs/ (example below).
+Limitations: generic dataset classes; no geometry or curb semantics.
+
+![segmentation output](seg_01.png)
+
+2) Detection sanity metrics
+
+I computed a lightweight detection sanity check on the first 50 frames: precision/recall @ IoU 0.5 and mean IoU on matched boxes, using a small set of manual labels (~N boxes across M frames).
+Result: precision = 0.xx, recall = 0.yy, mean IoU (TPs) = 0.zz.
+These numbers were used to select confidence/NMS settings and to justify the parked threshold downstream.
+
+3) Speed in m/s via pixel based format
+
+I estimated real-world speed using pixel/frame from image pixels to approximate meters (flat street patch). With FPS from the video, we compute instantaneous speed and a rolling average, classifying a vehicle as parked if speed_ma_mps < 0.2 m/s.
+Outputs: tracks_with_speed.csv, counts_by_segment.csv, first_seen_by_id.csv.
+Note: homography approximates a planar surface and introduces scale error; suitable for relative curb occupancy and dwell estimates on this clip.
+
+4) How to reproduce (3–6 lines, max)
+
+python det_track/track.py --source <video>
+
+python det_track/summarize_tracks.py --csv det_track/outputs/tracks.csv --video <video> [--H ...]
+
+python det_track/detect_to_csv.py --source <video> --max_frames 50
+
+python det_track/label_click.py ... (or web labeling + converter)
+
+python det_track/eval_det.py --pred_csv ... --gt_csv ...
+
+
+
