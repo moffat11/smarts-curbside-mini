@@ -60,4 +60,16 @@ python det_track/label_click.py ... (or web labeling + converter)
 python det_track/eval_det.py --pred_csv ... --gt_csv ...
 
 
+"# Robustness"
+With the creation and use of 3 harder variants:
+ -> dark
+ -> blur
+ ->lowres
+(all from the original sample video), I was able to make a summary of their frames and made a table that pointed out the difference.
+# Robustness quick check (px/frame)
 
+| clip       | avg unique_ids / 5s | parked / 5s | note                           |
+|------------|----------------------|--------------|------------------------------|
+| dark.mp4   |  30.83               |   1.00       | slight drop; conf=0.15 ok    |
+| blur.mp4   |  31.58               |   1.00       | recall ↓; conf=0.12 helps    |
+| lowres.mp4 |  31.04               |   1.00       | small objects weaker         |
