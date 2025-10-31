@@ -77,4 +77,7 @@ With the creation and use of 3 harder variants:
 # Short Demo clip
 shows boxes/IDs following vehicles, occlusion handling, jitter and failure modes
 
-<video src="det_track/demo_15s.mp4" controls muted width="720"></video>
+<h3>Demo (15s)</h3>
+<video src="det_track/demo_15s.mp4" controls muted width="720">
+  <a href="det_track/demo_15s.mp4">Download demo</a>
+</video>
