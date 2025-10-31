@@ -77,7 +77,4 @@ With the creation and use of 3 harder variants:
 # Short Demo clip
 shows boxes/IDs following vehicles, occlusion handling, jitter and failure modes
 
-<h3>Demo (15s)</h3>
-<video src="det_track/demo_15s.mp4" controls muted width="720">
-  <a href="det_track/demo_15s.mp4">Download demo</a>
-</video>
+<video src="https://raw.githubusercontent.com/moffat11/smarts-curbside-mini/main/det_track/demo_15s.mp4" controls muted width="720" playsinline></video>
