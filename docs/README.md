@@ -26,7 +26,7 @@ I was also able to make sample signs with make_signs.py
 
 +made sure to open the geojson file I made as well, it makes slight sense but there's more to look into from QGIS
 
-"# 1) Transformer Segmentation (SegFormer)"
+# 1) Transformer Segmentation (SegFormer)
 -> Semantic Segmentation: is a computer vision technique that assigns a class label to every single pixel in an image.
 
 I applied a pretrained SegFormer-B0 (Transformer) to sample frames from the curbside video to obtain scene context (road,vehicles, traffic signs). The script outputs side-by-side overlays for qualitative inspection. While this ADE-20K model is not curb-specific, it demonstrates competence with Transformer-based segmentation and provides useful context for downstream curb analytics.
@@ -76,7 +76,5 @@ With the creation and use of 3 harder variants:
 
 # Short Demo clip
 shows boxes/IDs following vehicles, occlusion handling, jitter and failure modes
-<h3>Demo (15s)</h3>
-<video src="det_track/demo_15s.mp4" controls playsinline muted width="720">
-</video>
 
+<video src="det_track/demo_15s.mp4" controls muted width="720"></video>
