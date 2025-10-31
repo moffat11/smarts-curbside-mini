@@ -74,10 +74,3 @@ With the creation and use of 3 harder variants:
 | blur.mp4   |  31.58               |   1.00       | recall ↓; conf=0.12 helps    |
 | lowres.mp4 |  31.04               |   1.00       | small objects weaker         |
 
-# Short Demo clip
-shows boxes/IDs following vehicles, occlusion handling, jitter and failure modes
-
-<video controls muted width="720" playsinline>
-  <source src="det_track/demo_15s.mp4" type="video/mp4" />
-  <a href="det_track/demo_15s.mp4">Download demo</a>
-</video>
