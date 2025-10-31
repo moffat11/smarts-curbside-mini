@@ -1,0 +1,15 @@
+{
+  "windows": [
+    {
+      "days": [
+        "MON",
+        "SAT"
+      ],
+      "start": "09:00",
+      "end": "18:00"
+    }
+  ],
+  "duration_limit": "2h",
+  "permit": null,
+  "direction": "\u2192"
+}
