@@ -74,3 +74,5 @@ With the creation and use of 3 harder variants:
 | blur.mp4   |  31.58               |   1.00       | recall ↓; conf=0.12 helps    |
 | lowres.mp4 |  31.04               |   1.00       | small objects weaker         |
 
+# Demo
+[▶️ Watch the MP4](det_track/demo_15s.mp4)
